@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Ada Comics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    
+</head>
+<body class="m-0 bg-slate-950 font-[roboto] font-bold bg-slate-50 max-w-2xl mx-auto items-center ">
+
+    <header class="text-center w-full mx-0 py-8">
+        <h1 class="adaLogo text-5xl font-bold text-blue-600 sm:text-6xl md:text-7xl">AdaComics</h1>
+
+        <div class="img mt-4">
+            <img src="./asset/marvel.jpg" alt="Marvel logo" class="mx-auto rounded-lg shadow-lg transition-all duration-500 transform hover:scale-105">
+        </div>
+    </header>
+
+    <main class="m-0 px-4 py-4 sm:px-6 sm:py-6">
+        <div class="mt-6 sm:mt-9">
+            <div class="mb-6 sm:mb-8">
+                <h2 class="text-xl sm:text-2xl font-semibold">Búsqueda</h2>
+                <div class="flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-4">
+                    <input type="text" class="busqueda-input p-2 border rounded w-full sm:w-auto" placeholder="Ingrese su Búsqueda" aria-labelledby="titulo" id="searchInput">
+                    <i class="fas fa-search p-2 cursor-pointer transition-transform transform hover:scale-125" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row sm:space-x-4 mb-6">
+                <div class="flex-1">
+                    <label for="tipo-busquedas" class="block">Tipo</label>
+                    <select name="tipo-busquedas" id="tipo-busquedas" class="select-style block w-full border p-2 rounded">
+                        <option value="comics">Comics</option>
+                        <option value="characters">Personajes</option>
+                    </select>
+                </div>
+
+                <div class="flex-1 mt-4 sm:mt-0">
+                    <label for="orden-busqueda" class="block">Orden</label>
+                    <select name="orden-busqueda" id="orden-busqueda" class="select-style block w-full border p-2 rounded">
+                        <option value="a-z">A-Z</option>
+                        <option value="z-a">Z-A</option>
+                        <option value="mas nuevos">Más Nuevos</option>
+                        <option value="mas viejos">Más Viejos</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="button" class="btn-busqueda px-5 py-2 mt-5 bg-yellow-300 rounded" id="searchBtn">Buscar</button>
+
+            <div id="loadingIndicator" class="hidden flex justify-center items-center mt-4">
+                <div class="loader animate-spin border-t-4 border-blue-500 border-solid rounded-full w-10 h-10"></div>
+            </div>
+
+            <div id="resultados">
+                <h4 class="text-xl font-bold uppercase mt-8" id="btnResultados">RESULTADOS</h4>
+            </div>
+
+            <h5 class="text-xl sm:text-2xl font-bold" id="cantidad-resultados">Resultados</h5>
+
+            <div id="resultados-busqueda">
+              
+            </div>
+            <div id="contenedor-detalles" class="hidden flex-col mt-10">
+
+            <div id="detalle-codigo" class="bg-gray-1000 p-4 rounded-lg shadow-lg"> 
+
+              </div>
+                </div>
+
+            <!-- paginador -->
+            <div class="mt-6 flex justify-center gap-5" id="pagination-container">
+                <!-- Buttons for pagination (commented out for now) -->
+            </div>
+        </div>
+    </main>
+
+    <div class="h-96 text-center py-4">
+        <footer class="text-sm text-gray-600">Erica Acosta</footer>
+    </div>
+
+    <script src="https://kit.fontawesome.com/aa9529ca56.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <script src="dev.js"></script>
+</body>
+</html>

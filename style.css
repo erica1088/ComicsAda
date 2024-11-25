@@ -1,0 +1,44 @@
+   /* Animación del logo */
+   @keyframes logoBounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.adaLogo {
+    animation: logoBounce 1s ease infinite;
+}
+
+/* Animación de carga */
+.loader {
+    border-top-color: #3498db;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Transición de botones */
+.btn-busqueda {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-busqueda:hover {
+    background-color: #fbbf24;
+    transform: scale(1.05);
+}
+
+/* Efecto de enfoque en inputs */
+.busqueda-input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.4);
+}
+
+.select-style:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.4);
+}
