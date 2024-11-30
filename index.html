@@ -12,7 +12,7 @@
 
     
 </head>
-<body class="m-0 bg-slate-950 font-[roboto] font-bold bg-slate-50 max-w-2xl mx-auto items-center ">
+<body class="m-0  font-[roboto] font-bold bg-slate-50 max-w-2xl mx-auto items-center ">
 
     <header class="text-center w-full mx-0 py-8">
         <h1 class="adaLogo text-5xl font-bold text-blue-600 sm:text-6xl md:text-7xl">AdaComics</h1>
@@ -22,7 +22,7 @@
         </div>
     </header>
 
-    <main class="m-0 px-4 py-4 sm:px-6 sm:py-6">
+    <main class="m-0 px-4 py-4 sm:px-6 lg:px-8 w-full">
         <div class="mt-6 sm:mt-9">
             <div class="mb-6 sm:mb-8">
                 <h2 class="text-xl sm:text-2xl font-semibold">Búsqueda</h2>
@@ -58,24 +58,39 @@
                 <div class="loader animate-spin border-t-4 border-blue-500 border-solid rounded-full w-10 h-10"></div>
             </div>
 
-            <div id="resultados">
-                <h4 class="text-xl font-bold uppercase mt-8" id="btnResultados">RESULTADOS</h4>
+            <section class="mt-20 mr-2.5 mb-12 ml-2.5 ">
+            <div id="resultados" class="flex flex-col items-center">
+                <h4 class="text-xl font-bold uppercase mt-8 " id="btnResultados">RESULTADOS</h4>
             </div>
 
-            <h5 class="text-xl sm:text-2xl font-bold" id="cantidad-resultados">Resultados</h5>
+            <h5 class="text-xl sm:text-2xl font-bold " id="cantidad-resultados">Resultados</h5>
 
-            <div id="resultados-busqueda">
+            <div id="resultados-busqueda" class="">
               
             </div>
-            <div id="contenedor-detalles" class="hidden flex-col mt-10"></div>
-            <div id="detalle-codigo" class="bg-gray-1000 p-4 rounded-lg shadow-lg"> </div>
+            <div id="contenedor-detalles" class="flex flex-wrap justify-center mt-5"></div>
+            <div id="detalle-codigo" class="hidden  flex-col mt-10"> </div>
            
 
             <!-- paginador -->
             <div class="mt-6 flex justify-center gap-5" id="pagination-container">
+            
+                    <button type="button" class="pagina-previa" id="primeraPagina">
+                        <i class="fa-solid fa-angles-left" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="pagina-anterior" id="paginaAnterior">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button type="button" class="pagina-siguiente" id="paginaSiguiente">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                    <button type="button" class="ultima-pagina" id="ultimaPagina">
+                        <i class="fa-solid fa-angles-right"></i>
+                    </button>
+            
              
-            </div>
         </div>
+    </section>
     </main>
 
     <div class="h-96 text-center py-4">
