@@ -306,6 +306,10 @@ function showDetails(item, type) {
     contenedorDetalles.innerHTML = characterDetails;
   }
 
+
+
+
+
   contenedorDetalles.classList.remove("hidden");
   tipoBusquedas.classList.add("hidden");
   ordenBusquedas.classList.add("hidden");
@@ -339,6 +343,11 @@ function showDetails(item, type) {
 
   contenedorDetalles.appendChild(backButton);
 }
+
+
+
+
+
 
 function mostrarResultados(data, type) {
   const contenedorBusqueda = document.getElementById("resultados-busqueda");
@@ -452,16 +461,17 @@ function scrollToTop() {
 }
 document.getElementById("scrollToTopButton").onclick = scrollToTop;
 
-window.onscroll = function () {
-  if (
-    document.body.scrollTop > 200 ||
-    document.documentElement.scrollTop > 200
+ window.onscroll = function () {
+   if (
+     document.body.scrollTop > 200 ||
+     document.documentElement.scrollTop > 200
   ) {
-    scrolltoTopButton.style.opacity = "1";
-    scrolltoTopButton.style.visibility = "visible";
-  } else {
-    scrolltoTopButton.style.opacity = "0";
+     scrolltoTopButton.style.opacity = "1";
+     scrolltoTopButton.style.visibility = "visible";
+   } else {
+     scrolltoTopButton.style.opacity = "0";
     scrolltoTopButton.style.visibility = "hidden";
   }
 };
+
 
